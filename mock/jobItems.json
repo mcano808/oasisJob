@@ -1,0 +1,33 @@
+{
+    "items":[{
+        "desc":"Item 1",
+        "qty":2,
+        "qty_uom":"ea",
+        "serial_num":["123rr45", "23s456"],
+        "notes":"Some notes on item here"
+    },{
+        "desc":"Item 1",
+        "qty":2,
+        "qty_uom":"ea",
+        "serial_num":["12af345", "23ff456"],
+        "notes":"Some notes on item here"
+    },{
+        "desc":"Item 3",
+        "qty":1,
+        "qty_uom":"ea",
+        "serial_num":["jas78S0K"],
+        "notes":"Some notes on item here"
+    },{
+        "desc":"Item 4",
+        "qty":1,
+        "qty_uom":"ea",
+        "serial_num":["8798j3d"],
+        "notes":"Some notes on item here"
+    },{
+        "desc":"Item 5",
+        "qty":1,
+        "qty_uom":"ea",
+        "serial_num":["8773"],
+        "notes":"Some notes on item here"
+    }]
+}

@@ -6,8 +6,15 @@ Ext.application({
 	name: "oasis",
 	appFolder: "app",
 	autoCreateViewport: true,
-	model: [],
+    stores:[],
+	models: [],
 	controllers: ['MainPanel'],
-    views: ['MainPanel']
+    views: [
+        'MainPanel',
+        'toptab.JobTab',
+        'toptab.CompanyTab',
+        'toptab.NotesTab',
+        'BottomGrid'
+    ]
 
 });

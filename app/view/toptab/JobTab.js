@@ -1,9 +1,11 @@
-Ext.define('oaisis.view.toptab.JobTab', {
+Ext.define('oasis.view.toptab.JobTab', {
     extend: 'Ext.form.Panel',
-    alias: 'widget.job',
+    alias: 'widget.jobtab',
 
-    intiComponent: function(){
-        this.layout = 'column';
+    initComponent: function(){
+        this.layout = 'hbox';
+        this.title = 'Job';
+        //this.html ='Something in here...';
         this.items = [this.column1(), this.column2(), this.column3()];
 
         return this.callParent(arguments);
@@ -11,22 +13,26 @@ Ext.define('oaisis.view.toptab.JobTab', {
 
     column1: function() {
         return {
-            columnWidth:.40,
+            flex:5,
             bodyStyle: 'padding:5px',
+            layout: 'anchor',
             items:[{
                 xtype: 'textfield',
+                anchor: '100%',
                 name: 'job_name',
-                blankText: 'Job Name',
+                emptyText: 'Job Name',
                 allowBlank: false
             },{
                 xtype: 'textfield',
+                anchor: '100%',
                 name: 'job_number',
-                blankText: 'Job #',
+                emptyText: 'Job #',
                 allowBlank: false
             },{
                 xtype: 'textfield',
+                anchor: '100%',
                 name:'street_number',
-                blankText: 'Street',
+                emptyText: 'Street',
                 allowBlank: false
             },{
                 xtype:'container',
@@ -35,19 +41,19 @@ Ext.define('oaisis.view.toptab.JobTab', {
                     xtype: 'textfield',
                     flex: 4,
                     name:'city',
-                    blankText: 'City',
+                    emptyText: 'City',
                     allowBlank: false
                 },{
                     xtype: 'textfield',
                     flex: 1,
                     name: 'state',
-                    blankText:'State',
+                    emptyText:'State',
                     allowBlank:false
                 },{
                     xtype: 'textfield',
                     flex: 2,
                     name: 'zipcode',
-                    blankText:'Zipcode',
+                    emptyText:'Zipcode',
                     allowBlank: false
                 }]
 
@@ -58,23 +64,55 @@ Ext.define('oaisis.view.toptab.JobTab', {
 
     column2: function(){
         return {
-            columnWidth: .4,
-            bodyStyle: 'padding:5px',
-            itmes:[{
-                xtype:'textfield',
-                name:'ref_number',
-                blankText:"Ref #(Customer's)"
-            },{
-                xtype: 'textfield',
-                name: 'po_number',
-                blankText: 'PO #'
-            },{
+            flex: 5,
+            bodyStyle: 'padding:15px',
+            layout: 'anchor',
+            items:[{
                 xtype: 'container',
                 layout: 'hbox',
                 items: [{
+                    xtype: 'textfield',
+                    name: 'jo_project_poc',
+                    flex:2,
+                    emptyText: 'Project POC'
+                },{
+                    xtype: 'textfield',
+                    name: 'jo_phine_num',
+                    flex:1,
+                    emptyText: 'Phone #'
+                },{
+                    xtype: 'button',
+                    iconCls: 'icon-book'
+                }]
+            },{
+                xtype:'textfield',
+                anchor: '100%',
+                name:'jo_ref_number',
+                emptyText:"Ref #(Customer's)"
+            },{
+                xtype: 'textfield',
+                anchor: '100%',
+                name: 'jo_po_number',
+                emptyText: 'PO #'
+            },{
+                xtype: 'container',
+                layout: 'hbox',
+                anchor: '100%',
+                items: [{
                     xtype:'button',
+                    flex: 1,
                     text: 'Contacts',
-                    iconCls:''
+                    iconCls:'icon-book'
+                },{
+                    xtype: 'button',
+                    flex:1,
+                    text: 'Status',
+                    iconCls: 'icon-status'
+                },{
+                    xtype: 'button',
+                    flex: 1,
+                    text: 'Documents',
+                    iconCls: 'icon-docs'
                 }]
 
             }]
@@ -82,6 +120,16 @@ Ext.define('oaisis.view.toptab.JobTab', {
     },
     column3: function(){
         return{
+            flex:3,
+            bodyStyle: 'padding:15px',
+            layout:'anchor',
+            items: [{
+                xtype: 'textareafield',
+                name: 'jo_notes',
+                emptyText: 'Job Notes...',
+                anchor: '100%'
+
+            }]
 
         };
     }

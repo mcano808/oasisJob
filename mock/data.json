@@ -1,0 +1,15 @@
+{
+    "jobs":[{
+        "jobNum":0001,
+        "customerNum":1
+    },{
+        "jobNum":0002,
+        "customerNum":1
+    }, {
+        "jobNum":0003,
+        "customerNum":2
+    },{
+        "jobNum":0004,
+        "customerNum":3
+    }]
+}
